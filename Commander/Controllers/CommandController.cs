@@ -1,3 +1,4 @@
+using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Commander.Controllers
@@ -6,6 +7,9 @@ namespace Commander.Controllers
   [ApiController]
   public class CommandController : ControllerBase
   {
-    
+    public ActionResult<IEnumerable<Command>> GetAllCommands()
+    {
+      
+    }
   }
 }
