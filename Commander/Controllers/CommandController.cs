@@ -9,7 +9,13 @@ namespace Commander.Controllers
   [ApiController]
   public class CommandController : ControllerBase
   {
-    private readonly MockcommanderRepo _repository = new MockcommanderRepo();
+    private readonly ICommanderRepo _repository;
+    public CommandController(ICommanderRepo repository)
+    
+    {
+      _repository = repository;
+    }
+    
     //Get api/commands
     [HttpGet]
     public ActionResult<IEnumerable<Command>> GetAllCommands()
